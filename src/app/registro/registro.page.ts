@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-registro',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  formularioRegistro: FormGroup;
+
+  constructor(public fb: FormBuilder) { 
+    this.formularioRegistro = this.fb.group({
+      'nombre': new FormControl("",Validators.required),
+      'password': new FormControl("",Validators.required),
+      'confirmacionPassword': new FormControl("",Validators.required),
+  
+    })
+  }
 
   ngOnInit() {
   }
