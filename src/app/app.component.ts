@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inicio ', url: '/folder/Inicio', icon: 'home' },
-    { title: 'Mis calificaciones', url: '/folder/calificaciones', icon: 'star-half' },
-    { title: 'Peliculas', url: '/folder/Peliculas', icon: 'film' },
-    { title: 'Videojuegos ', url: '/folder/Videojuegos', icon: 'game-controller' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Inicio ', url: '/inicio', icon: 'home' },
+    { title: 'Mis calificaciones', url: '/calificaciones', icon: 'star-half' },
+    { title: 'Peliculas', url: '/Peliculas', icon: 'film' },
+    { title: 'Videojuegos ', url: '/Videojuegos', icon: 'game-controller' },
+    { title: 'Trash', url: '/Trash', icon: 'trash' },
+    { title: 'Spam', url: '/Spam', icon: 'warning' },
   ];
  
   constructor() {}

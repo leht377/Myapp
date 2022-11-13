@@ -28,7 +28,7 @@ async Ingresar(){
   var usuario = JSON.parse(localStorage.getItem('usuario'));
 
   if(usuario.nombre == f.nombre && usuario.password == f.password){
-    this.navControl.navigateRoot('folder/Inicio');
+    this.navControl.navigateRoot('/inicio');
   }else
 {
   const alert = await this.alertController.create({
