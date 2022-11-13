@@ -18,7 +18,7 @@
       <form [formGroup]="formularioRegistro"(keyup.enter)="guardar()" >
         <ion-item>
           <ion-label position="floating">Nombre </ion-label>
-          <ion-input formControlName="nombre"></ion-input>
+          <ion-input formControlName="nombre" ></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Contraseña </ion-label>
@@ -30,16 +30,12 @@
         </ion-item>
         <ion-list>
           <ion-item>
-            <ion-select interface="popover" placeholder="Seleccione rol">
-              <ion-select-option value="Usuario">Usuario</ion-select-option>
-              <ion-select-option value="Admin">Admin</ion-select-option>
+            <ion-select formControlName="rol" interface="popover" placeholder="Seleccione rol">
+              <ion-select-option  value="Usuario">Usuario</ion-select-option>
+              <ion-select-option  value="Admin">Admin</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-list>
-        <ion-item class="ion-hide">
-          <ion-label position="floating">Contraseña admin </ion-label>
-          <ion-input formControlName="confirmacionPassword" [disabled]="true" ></ion-input>
-        </ion-item>
       </form>
         <ion-button class="button_login" (click)="guardar()">
          Registarse

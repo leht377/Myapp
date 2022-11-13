@@ -20,5 +20,13 @@ export class LoginPage implements OnInit {
   }
   ngOnInit() {
   }
+Ingresar(){
+  var f = this.formulariologin.value;
 
+  var usuario = JSON.parse(localStorage.getItem('usuario'));
+
+  if(usuario.nombre == f.nombre && usuario.password == f.password){
+    console.log('Listo compa')
+  }
+}
 }
