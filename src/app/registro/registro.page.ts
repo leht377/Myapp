@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -31,6 +31,7 @@ export class RegistroPage implements OnInit {
         header: 'Formulario Incompleto',
         message: 'Debes llenar todos los datos',
         buttons: ['Aceptar'],
+        
       });
   
       await alert.present();
