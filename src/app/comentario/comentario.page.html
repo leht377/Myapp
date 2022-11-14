@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+        <ion-title>comentario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img alt="img" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title>Title</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      despcripcion      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item counter="true">
+    <ion-label position="floating">Comentario</ion-label>
+    <ion-textarea  [autoGrow]="true" maxlength="3000"></ion-textarea>
+  </ion-item>
+  <ion-button>guardar</ion-button>
+</ion-content>

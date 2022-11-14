@@ -31,7 +31,11 @@ const routes: Routes = [
   {
     path: 'videojuegos',
     loadChildren: () => import('./videojuegos/videojuegos.module').then( m => m.VideojuegosPageModule)
+  },  {
+    path: 'comentario',
+    loadChildren: () => import('./comentario/comentario.module').then( m => m.ComentarioPageModule)
   }
+
 
 ];
 
