@@ -1,10 +1,17 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="push">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+          <ion-list-header>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+              </ion-avatar>
+              <ion-label>{{userName.nombre}}</ion-label>
+            </ion-item>
+        </ion-list-header>
+  
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -12,6 +19,11 @@
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
+        
+        <ion-item lines="none" (click)="logout()" routerDirection="root" detail="false" routerLinkActive="selected">
+          <ion-icon slot="start" ios="log-out-outline" md="log-out-sharp"></ion-icon>
+          <ion-label>cerrar session</ion-label>
+        </ion-item>
         </ion-list>
 
       </ion-content>
