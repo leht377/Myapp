@@ -34,6 +34,10 @@ const routes: Routes = [
   },  {
     path: 'comentario',
     loadChildren: () => import('./comentario/comentario.module').then( m => m.ComentarioPageModule)
+  },
+  {
+    path: 'cargar',
+    loadChildren: () => import('./cargar/cargar.module').then( m => m.CargarPageModule)
   }
 
 

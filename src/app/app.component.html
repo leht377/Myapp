@@ -18,6 +18,10 @@
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
+            <ion-item *ngIf="p.title==Subir && userName.rol==Admin" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
           </ion-menu-toggle>
         
         <ion-item lines="none" (click)="logout()" routerDirection="root" detail="false" routerLinkActive="selected">

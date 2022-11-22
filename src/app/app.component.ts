@@ -14,6 +14,7 @@ export class AppComponent {
     { title: 'Videojuegos ', url: '/videojuegos', icon: 'game-controller' },
     { title: 'Trash', url: '/Trash', icon: 'trash' },
     { title: 'Spam', url: '/Spam', icon: 'warning' },
+    { title: 'Subir', url: '/cargar', icon: 'arrow-up-circle' },
   ];
 
   public userName = JSON.parse(localStorage.getItem('usuario'));

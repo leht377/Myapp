@@ -64,7 +64,8 @@ export class RegistroPage implements OnInit {
     }
     var usuario ={
       nombre: f.nombre,
-      password: f.password
+      password: f.password,
+      rol: f.rol
     }
 
     localStorage.setItem('usuario', JSON.stringify(usuario));
