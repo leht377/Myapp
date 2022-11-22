@@ -7,6 +7,10 @@ import { NavController } from '@ionic/angular';
 })
 export class AppComponent {
 
+  public userName = JSON.parse(localStorage.getItem('usuario'));
+  b: boolean = false;
+  
+  
   public appPages = [
     { title: 'Inicio ', url: '/inicio', icon: 'home' },
     { title: 'Mis calificaciones', url: '/calificaciones', icon: 'star-half' },
@@ -14,15 +18,28 @@ export class AppComponent {
     { title: 'Videojuegos ', url: '/videojuegos', icon: 'game-controller' },
     { title: 'Trash', url: '/Trash', icon: 'trash' },
     { title: 'Spam', url: '/Spam', icon: 'warning' },
-    { title: 'Subir', url: '/cargar', icon: 'arrow-up-circle' },
+    { title: 'cerrar sesion ', url: '/login', icon: 'log-out' },
   ];
-
-  public userName = JSON.parse(localStorage.getItem('usuario'));
+  public appPagesAdmin = [
+    { title: 'Inicio ', url: '/inicio', icon: 'home' },
+    { title: 'Mis calificaciones', url: '/calificaciones', icon: 'star-half' },
+    { title: 'Peliculas', url: '/peliculas', icon: 'film' },
+    { title: 'Videojuegos ', url: '/videojuegos', icon: 'game-controller' },
+    { title: 'Trash', url: '/Trash', icon: 'trash' },
+    { title: 'Spam', url: '/Spam', icon: 'warning' },
+    { title: 'Subir', url: '/cargar', icon: 'arrow-up-circle' },
+    { title: 'cerrar sesion ', url: '/login', icon: 'log-out' },
+  ];
+ 
+  
  
   constructor(public navControl: NavController) {}
 
+  
+  
+
   logout(){
-    this.navControl.navigateRoot('/login');
+    this.navControl.navigateRoot('/login'); 
   }
 }
 

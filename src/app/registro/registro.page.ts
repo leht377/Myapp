@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, MenuController, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class RegistroPage implements OnInit {
   submit: boolean=false;
 
   constructor(public fb: FormBuilder, public alertController: AlertController, 
-    public navControl:NavController) { 
+    public navControl:NavController, public menuCtrl: MenuController) { 
     this.formularioRegistro = this.fb.group({
       'nombre': new FormControl(null,Validators.required),
       'password': new FormControl(null,Validators.required),
@@ -46,6 +46,10 @@ export class RegistroPage implements OnInit {
 
   ngOnInit() {
   }
+
+  ionViewWillEnter() {
+    this.menuCtrl.enable(false);
+   }
 
   async guardar(){
     this.submit= true;

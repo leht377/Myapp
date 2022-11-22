@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, MenuController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,8 @@ export class LoginPage implements OnInit {
   formulariologin: FormGroup
 
   constructor(public fb: FormBuilder,
-    public alertController: AlertController, public navControl: NavController) {
+    public alertController: AlertController, public navControl: NavController
+    ,public menuCtrl: MenuController) {
 
     this.formulariologin = this.fb.group({
       'nombre': new FormControl("", Validators.required),
@@ -23,6 +24,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  
+  ionViewWillEnter() {
+    this.menuCtrl.enable(false);
+   }
   
   async Ingresar() {
     var f = this.formulariologin.value;
