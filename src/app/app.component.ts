@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Usuario } from './models/usuario';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -9,6 +12,7 @@ export class AppComponent {
 
   public userName = JSON.parse(localStorage.getItem('usuario'));
   b: boolean = false;
+  public usuarios: Usuario[] = [];
   
   
   public appPages = [
@@ -33,7 +37,11 @@ export class AppComponent {
  
   
  
-  constructor(public navControl: NavController) {}
+  constructor(public navControl: NavController) {
+    let usuario = new Usuario();
+    let data = {id: 1, username: 'user', email:'@user' }
+    usuario.setValues(data);
+  }
 
   
   

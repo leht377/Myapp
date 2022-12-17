@@ -8,6 +8,23 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-card *ngFor= "let item of peliculas">
+    <img alt={{item.titulo}} src={{item.imagen}} />
+    <ion-card-header>
+      <ion-card-title>{{item.titulo}}</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{item | json}}
+    </ion-card-content>
+    <ion-button expand="full" [routerLink]="['/comentario']">
+      Calificar
+      <ion-icon slot="end" name="star-half"></ion-icon>
+    </ion-button>
+  </ion-card>
+
   <ion-card>
     <img alt="La Huérfana: el origen" src="assets/img/huerfana2.png" />
     <ion-card-header>
