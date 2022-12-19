@@ -9,7 +9,7 @@ import { AlertController, MenuController, NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  formulariologin: FormGroup
+  formulariologin: FormGroup;
 
   constructor(public fb: FormBuilder,
     public alertController: AlertController, public navControl: NavController
@@ -24,11 +24,11 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-  
+
   ionViewWillEnter() {
     this.menuCtrl.enable(false);
    }
-  
+
   async Ingresar() {
     var f = this.formulariologin.value;
 
