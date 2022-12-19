@@ -78,7 +78,10 @@ export class RegistroPage implements OnInit {
 
     this.login = new Login();
     this.login.setValues(data);
-    this.UsuarioService.create(this.login)
+    this.UsuarioService.create(this.login);
+
+    this.navControl.navigateRoot('/login');
+    
     // var usuario ={
     //   nombre: f.nombre,
     //   password: f.password,
